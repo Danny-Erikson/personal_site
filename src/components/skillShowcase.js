@@ -1,10 +1,13 @@
-function SkillShowcase({ icon, title, description }) {
+import './skillShowcase.css';
+
+function SkillShowcase({ icon, title, tech, description }) {
   return (
-    <div>
-        <div>
-            {icon}<h3>{title}</h3>
-            <p>{description}</p>
-        </div>
+    <div className="skillcard">
+      <div className='skillheader'>
+        <div>{icon}</div>
+        <div><p>{title}</p><span>{tech}</span></div>
+      </div>
+      <p>{description}</p>
     </div>
   );
 }

@@ -54,3 +54,20 @@
   max-width: 100%;
   border-radius: 8px;
 }
+
+.skillcontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skillshowcase{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+
+}
+
+/* TODO: Add othertech class */

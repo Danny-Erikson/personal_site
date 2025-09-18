@@ -8,6 +8,7 @@ import { GrMysql } from "react-icons/gr";
 import { SiCsswizardry } from "react-icons/si";
 import SkillShowcase from './components/skillShowcase.js';
 
+/* TODO: Add stars background */
 
 function App() {
   return (
@@ -37,32 +38,36 @@ function App() {
           <img src={placeholder} alt="Danny Erikson" width="500" />
         </div>
       </div>
-      <div>
+      <div className='skillcontainer'>
+        {/* TODO: Add basic box styling to this h1 */}
         <h1>Stuff I Work With</h1>
-        <div className='skill-showcase'>
+        <div className='skillshowcase'>
           <SkillShowcase 
-            icon={<GrMysql size={40} color="#00758F"/>}
-            title={"MySQL"}
-            description={"Officia consectetur veniam dolore aliquip deserunt sint excepteur amet occaecat laboris."}
-          />
-          <SkillShowcase 
-            icon={<FaReact size={40} color="#61DBFB"/>}
-            title={"React"}
-            description={"Ex aute sunt velit proident reprehenderit aliqua dolor non elit consequat minim non."} 
+            icon={<FaReact size={65} color="#61DBFB"/>}
+            title={"Web Development"}
+            tech={"React"}
+            description={"React makes up the frontend of most of my projects. I love the component based architecture and the speed it provides."} 
           />
             <SkillShowcase 
-            icon={<img src={pythonlogo} alt="Python Logo" width={40} />}
-            title={"Python"}
-            description={"Commodo officia aliqua anim ad sunt veniam nisi deserunt do."}
+            icon={<img src={pythonlogo} alt="Python Logo" width={65} />}
+            title={"Backend Development"}
+            tech={"Python"}
+            description={"Python is my go to for backend development. I love the simplicity and readability of the language."}
+          />
+          <SkillShowcase 
+            icon={<GrMysql size={65} color="white"/>}
+            title={"Database Management"}
+            tech={"MySQL"}
+            description={"I primarily use MySQL for database management. I have experience with relational databases and perfer them to non-relational models."}
           />
         </div>
-        <div>
-          <h2>Other stuff I work with</h2>
-          <img src={javalogo} alt="Java Logo" width={40} />
-          <FaGitAlt size={40} color='#F1502F'/>
-          <FaHtml5 size={40} color='#f06529'/>
-          <SiCsswizardry size={40} color='#663399'/>
-          <FaLinux size={40}/>
+        <h2>Other stuff I work with</h2>
+        <div className='othertech'>
+          <img src={javalogo} alt="Java Logo" width={40} /> <p>Java</p>
+          <FaHtml5 size={40} color='#f06529'/> <p>HTML</p>
+          <SiCsswizardry size={40} color='#663399'/> <p>CSS</p>
+          <FaGitAlt size={40} color='#F1502F'/> <p>Git</p>
+          <FaLinux size={40}/> <p>Linux</p>
         </div>
       </div>
     </div>
