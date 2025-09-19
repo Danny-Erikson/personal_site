@@ -39,8 +39,7 @@ function App() {
         </div>
       </div>
       <div className='skillcontainer'>
-        {/* TODO: Add basic box styling to this h1 */}
-        <h1>Stuff I Work With</h1>
+        <h1 className='skilltitle' style={{ backgroundColor: 'dodgerblue'}} >Stuff I Work With</h1>
         <div className='skillshowcase'>
           <SkillShowcase 
             icon={<FaReact size={65} color="#61DBFB"/>}
@@ -61,7 +60,7 @@ function App() {
             description={"I primarily use MySQL for database management. I have experience with relational databases and perfer them to non-relational models."}
           />
         </div>
-        <h2>Other stuff I work with</h2>
+        <h2 className='skilltitle' style={{ backgroundColor: '#6495ED'}}>Other stuff I work with</h2>
         <div className='othertech'>
           <img src={javalogo} alt="Java Logo" width={40} /> <p>Java</p>
           <FaHtml5 size={40} color='#f06529'/> <p>HTML</p>

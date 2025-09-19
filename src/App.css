@@ -55,13 +55,20 @@
   border-radius: 8px;
 }
 
-.skillcontainer{
+.skillcontainer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.skillshowcase{
+.skilltitle {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.skillshowcase {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -70,4 +77,14 @@
 
 }
 
-/* TODO: Add othertech class */
+.othertech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 5px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #91adc9;
+  border-radius: 8px;
+}
