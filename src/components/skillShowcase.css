@@ -1,9 +1,9 @@
 .skillcard {
   flex: 1 1 300px;
-  max-width: 350px;
   min-height: 150px;
   background-color: lightslategrey;
   padding: 10px;
+  border-radius: 8px;
 }
 
 .skillheader {

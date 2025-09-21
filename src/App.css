@@ -40,12 +40,10 @@ body { margin: 0; }
 }
 
 .namecard h1 {
-  margin: 0;
   font-size: 4rem;
 }
 
 .namecard p {
-  margin: 0;
   font-size: 2.5rem;
 }
 
@@ -75,6 +73,8 @@ body { margin: 0; }
   max-width: 100%;
   border-radius: 30px;
 }
+
+/*FIXME: adjust to fit/look better, all below*/
 
 .skillcontainer {
   display: flex;

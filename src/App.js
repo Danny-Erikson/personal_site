@@ -7,6 +7,7 @@ import { IoMailOutline, IoDocumentTextOutline } from "react-icons/io5";
 import { GrMysql } from "react-icons/gr";
 import { SiCsswizardry, SiIndeed } from "react-icons/si";
 import SkillShowcase from './components/skillShowcase.js';
+import ProjectShowcase from './components/ProjectShowcase.js';
 import Galaxy from './Galaxy';
 
 /* TODO: Fix File spacing*/
@@ -24,8 +25,7 @@ function App() {
           <div className='namecard'>
             <h1>Hi, I'm Danny Erikson</h1>
             <p>I'm a Full Stack Dev<br />In Los Angeles</p>
-            {/*TODO: Test more space between this and links*/}
-
+            
           <div className='links'>
             <a href="https://github.com/" target="_blank" rel="noreferrer">
               <FaGithub size={69} />
@@ -50,7 +50,6 @@ function App() {
           <img src={portrait} alt="Danny Erikson" width="550" />
         </div>
         </div>
-        {/*FIXME: adjust to fit/look better, all below*/}
         <div className='skillcontainer'>
         <h1 className='skilltitle' style={{ backgroundColor: 'dodgerblue'}} >Stuff I Work With</h1>
         <div className='skillshowcase'>
@@ -81,6 +80,15 @@ function App() {
           <FaGitAlt size={40} color='#F1502F'/> <p>Git</p>
           <FaLinux size={40}/> <p>Linux</p>
         </div>
+        </div>
+        <div>
+          <h1>Work Experience</h1>
+        </div>
+        <div>
+          <h1>Projects</h1>
+          <div>
+            <ProjectShowcase />
+          </div>
         </div>
       </div>
     </div>
