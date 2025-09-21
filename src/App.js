@@ -1,5 +1,5 @@
 import './App.css';
-import placeholder from './assets/placeholder.png';
+import portrait from './assets/portrait.png';
 import pythonlogo from './assets/pythonlogo.png';
 import javalogo from './assets/javalogo.svg';
 import { FaGithub, FaLinkedin, FaReact, FaGitAlt, FaHtml5, FaLinux} from "react-icons/fa";
@@ -7,39 +7,51 @@ import { IoMailOutline, IoDocumentTextOutline } from "react-icons/io5";
 import { GrMysql } from "react-icons/gr";
 import { SiCsswizardry, SiIndeed } from "react-icons/si";
 import SkillShowcase from './components/skillShowcase.js';
+import Galaxy from './Galaxy';
+
+/* TODO: Fix File spacing*/
+/* TODO: Fix File structure*/
+
 
 function App() {
   return (
-    <div className='app'>
-      <div className='nameplate'>
-        <div className='namecard'>
-          <h1>Hi, I'm Danny Erikson</h1>
-          <p>I'm a Full Stack Dev<br />In Los Angeles</p>
+    <div className="site">
+      <div className="galaxy-bg" aria-hidden="true">
+        <Galaxy />
+      </div>
+      <div className="app">
+        <div className='nameplate'>
+          <div className='namecard'>
+            <h1>Hi, I'm Danny Erikson</h1>
+            <p>I'm a Full Stack Dev<br />In Los Angeles</p>
+            {/*TODO: Test more space between this and links*/}
 
           <div className='links'>
             <a href="https://github.com/" target="_blank" rel="noreferrer">
-              <FaGithub size={40} />
+              <FaGithub size={69} />
             </a>
             <a href="https://www.indeed.com/" target="_blank" rel="noreferrer">
-              <SiIndeed size={40} />
+              <SiIndeed size={69} />
             </a>
             <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-              <FaLinkedin size={40} />
+              <FaLinkedin size={69} />
             </a>
             <a href="https://en.wikipedia.org/wiki/Gmail" target="_blank" rel="noreferrer">
-              <IoMailOutline size={40} />
+              <IoMailOutline size={69} />
             </a>
             <a href="https://en.wikipedia.org/wiki/R%C3%A9sum%C3%A9" target="_blank" rel="noreferrer">
-              <IoDocumentTextOutline size={40} />
+              <IoDocumentTextOutline size={69} />
             </a>
+            {/* Placeholder for dynamic text*/}
+            <p>resume download</p>
           </div>
         </div>
-
         <div className='box-b'>
-          <img src={placeholder} alt="Danny Erikson" width="500" />
+          <img src={portrait} alt="Danny Erikson" width="550" />
         </div>
-      </div>
-      <div className='skillcontainer'>
+        </div>
+        {/*FIXME: adjust to fit/look better, all below*/}
+        <div className='skillcontainer'>
         <h1 className='skilltitle' style={{ backgroundColor: 'dodgerblue'}} >Stuff I Work With</h1>
         <div className='skillshowcase'>
           <SkillShowcase 
@@ -68,6 +80,7 @@ function App() {
           <SiCsswizardry size={40} color='#663399'/> <p>CSS</p>
           <FaGitAlt size={40} color='#F1502F'/> <p>Git</p>
           <FaLinux size={40}/> <p>Linux</p>
+        </div>
         </div>
       </div>
     </div>

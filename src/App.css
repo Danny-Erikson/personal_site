@@ -1,14 +1,35 @@
+/* Make the page a proper stacking context and remove default margins */
+:root { color-scheme: dark; }
+html, body, #root { height: 100%; }
+body { margin: 0; }
+
+.site {
+  position: relative;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.galaxy-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/*TODO: Fix Class Naming*/
+
 .app {
+  position: relative;
+  z-index: 1;
   width: 80%;
-  max-width: 1100px;
   margin: 0 auto;
-  padding-block: 32px;
 }
 
 .nameplate {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
+  padding: 50px;
   gap: 24px;
 }
 
@@ -20,20 +41,21 @@
 
 .namecard h1 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .namecard p {
   margin: 0;
-  font-size: 1.75rem;
-  color: #666;
+  font-size: 2.5rem;
 }
 
 .links {
   display: flex;
-  gap: 12px;
-  background-color: rgb(138, 0, 138);
-  padding: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(97, 0, 97, 0.3);
+  padding: 15px;
+  gap: 50px;
   border-radius: 8px;
 }
 
@@ -49,10 +71,9 @@
   transition: color 0.2s ease, scale 0.2s ease;
 }
 
-
 .box-b img {
   max-width: 100%;
-  border-radius: 8px;
+  border-radius: 30px;
 }
 
 .skillcontainer {
