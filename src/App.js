@@ -5,10 +5,8 @@ import javalogo from './assets/javalogo.svg';
 import { FaGithub, FaLinkedin, FaReact, FaGitAlt, FaHtml5, FaLinux} from "react-icons/fa";
 import { IoMailOutline, IoDocumentTextOutline } from "react-icons/io5";
 import { GrMysql } from "react-icons/gr";
-import { SiCsswizardry } from "react-icons/si";
+import { SiCsswizardry, SiIndeed } from "react-icons/si";
 import SkillShowcase from './components/skillShowcase.js';
-
-/* TODO: Add stars background */
 
 function App() {
   return (
@@ -21,6 +19,9 @@ function App() {
           <div className='links'>
             <a href="https://github.com/" target="_blank" rel="noreferrer">
               <FaGithub size={40} />
+            </a>
+            <a href="https://www.indeed.com/" target="_blank" rel="noreferrer">
+              <SiIndeed size={40} />
             </a>
             <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
               <FaLinkedin size={40} />
