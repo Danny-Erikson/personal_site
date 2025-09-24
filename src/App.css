@@ -47,6 +47,7 @@ body { margin: 0; }
   font-size: 2.5rem;
 }
 
+/*FIXME: This needs more ridgid spaceing, flex box is causing a huge perfromence hit*/
 .links {
   display: flex;
   justify-content: space-evenly;
@@ -73,8 +74,6 @@ body { margin: 0; }
   max-width: 100%;
   border-radius: 30px;
 }
-
-/*FIXME: adjust to fit/look better, all below*/
 
 .skillcontainer {
   display: flex;

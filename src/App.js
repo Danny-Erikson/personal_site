@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import portrait from './assets/portrait.png';
 import pythonlogo from './assets/pythonlogo.png';
@@ -13,8 +14,9 @@ import Galaxy from './Galaxy';
 /* TODO: Fix File spacing*/
 /* TODO: Fix File structure*/
 
-
 function App() {
+const [hoverText, setHoverText] = useState("Quick Links");
+
   return (
     <div className="site">
       <div className="galaxy-bg" aria-hidden="true">
@@ -27,23 +29,46 @@ function App() {
             <p>I'm a Full Stack Dev<br />In Los Angeles</p>
             
           <div className='links'>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
-              <FaGithub size={69} />
+            <a 
+            href="https://github.com/"
+            target="_blank"
+            rel="noreferrer"
+            onMouseEnter={() => setHoverText("GitHub Profile")}
+            onMouseLeave={() => setHoverText("Quick Links")}>
+            <FaGithub size={69} />
             </a>
-            <a href="https://www.indeed.com/" target="_blank" rel="noreferrer">
-              <SiIndeed size={69} />
+            <a 
+            href="https://www.indeed.com/"
+            target="_blank"
+            rel="noreferrer"
+            onMouseEnter={() => setHoverText("Indeed Profile")}
+            onMouseLeave={() => setHoverText("Quick Links")}>
+            <SiIndeed size={69} />
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+            <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noreferrer"
+            onMouseEnter={() => setHoverText("LinkedIn Profile")}
+            onMouseLeave={() => setHoverText("Quick Links")}>
               <FaLinkedin size={69} />
             </a>
-            <a href="https://en.wikipedia.org/wiki/Gmail" target="_blank" rel="noreferrer">
+            <a href="https://en.wikipedia.org/wiki/Gmail"
+            target="_blank"
+            rel="noreferrer"
+            onMouseEnter={() => setHoverText("Email Me")}
+            onMouseLeave={() => setHoverText("Quick Links")}>
               <IoMailOutline size={69} />
             </a>
-            <a href="https://en.wikipedia.org/wiki/R%C3%A9sum%C3%A9" target="_blank" rel="noreferrer">
+            <a 
+            href="https://en.wikipedia.org/wiki/R%C3%A9sum%C3%A9"
+            target="_blank"
+            rel="noreferrer"
+            onMouseEnter={() => setHoverText("Resume Download")}
+            onMouseLeave={() => setHoverText("Quick Links")}>
               <IoDocumentTextOutline size={69} />
             </a>
-            {/* Placeholder for dynamic text*/}
-            <p>resume download</p>
+            <p>{hoverText}</p>
           </div>
         </div>
         <div className='box-b'>
