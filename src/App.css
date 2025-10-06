@@ -1,7 +1,15 @@
 /* Make the page a proper stacking context and remove default margins */
-:root { color-scheme: dark; }
-html, body, #root { height: 100%; }
-body { margin: 0; }
+:root {
+  color-scheme: dark;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
 
 .site {
   position: relative;
@@ -94,7 +102,6 @@ body { margin: 0; }
   gap: 20px;
   width: 100%;
   justify-content: center;
-
 }
 
 .othertech {
